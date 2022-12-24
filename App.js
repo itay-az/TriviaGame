@@ -1,19 +1,16 @@
 import React from 'react';
-import {  Text, TouchableOpacity, View } from 'react-native';
 import { styles } from './style/style';
-import mainStack from './src/navigation/index'
-import Dashboard from './src/screens/Dashboard';
-import Questions from './src/screens/Questions';
-import Failed from './src/screens/Failed';
-import Success from './src/screens/Success';
+import MainStack from './src/navigation/index';
+import {NavigationContainer} from '@react-navigation/native';
+
 
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Success />
+    <NavigationContainer>
+      <MainStack />
+    </NavigationContainer>
 
-    </View>
   );
 }
 

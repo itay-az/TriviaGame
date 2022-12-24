@@ -16,25 +16,22 @@ const Colors = {
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor:Colors.backgroundBlue,
-        margin:0,
-        padding:0
       },
       mainLogo:{
         justifyContent:'center',
         alignItems:'center',
-        width:500,
-        height:500,
+        width:400,
+        height:400,
         resizeMode:'contain'
       },
 
       DashboardBtn:{
         paddingHorizontal:70,
-        marginTop:80,
-        width:'100%',
+        marginTop:100,
+        width:'80%',
         height:'10%',
         backgroundColor:Colors.white,
         borderRadius:20,
@@ -46,5 +43,9 @@ export const styles = StyleSheet.create({
         color:Colors.fontAnswerColor,
         fontSize:32,
         fontWeight:'bold'
-      }
+      },
+      dashboardHeaderStyle:{
+        backgroundColor:Colors.backgroundBlue,
+        borderColor:Colors.backgroundBlue
+    }
 })
