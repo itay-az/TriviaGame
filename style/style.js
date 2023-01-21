@@ -20,6 +20,15 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor:Colors.backgroundBlue,
       },
+      questionContainer:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding:0,
+        margin:0,
+        width:'100%',
+        backgroundColor:Colors.white
+      },
       mainLogo:{
         justifyContent:'center',
         alignItems:'center',
@@ -39,7 +48,6 @@ export const styles = StyleSheet.create({
         alignItems:'center',
       },
       btnTxt:{
-
         color:Colors.fontAnswerColor,
         fontSize:32,
         fontWeight:'bold'
@@ -47,5 +55,123 @@ export const styles = StyleSheet.create({
       dashboardHeaderStyle:{
         backgroundColor:Colors.backgroundBlue,
         borderColor:Colors.backgroundBlue
-    }
+      },
+      qPageTop:{
+        width:'100%',
+        flexDirection:'row',
+        
+      },
+      questionsContainer:{
+        padding:20,
+        width:'100%',
+        backgroundColor:Colors.white
+      },
+      levelDif:{
+        color:Colors.fontLevel,
+        fontWeight:'bold'
+      },
+      questionView:{
+        paddingVertical:20
+      },
+      qeustionText:{
+        fontSize:18
+      },
+      optionsView:{
+        display:'flex',
+        flexDirection:'column'
+      },
+      answerBtn:{
+        backgroundColor:Colors.grey,
+        marginTop:20,
+        padding:20,
+        width:'80%',
+        borderRadius:10
+      },
+      qHeader:{
+        backgroundColor:Colors.backgroundBlue,
+        width:'100%',
+        height:'10%',
+        justifyContent:'center'
+      },
+      qText:{
+        color:Colors.white,
+        fontSize:18
+
+      },
+      FailedContainer:{
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:Colors.white,
+        backgroundColor:Colors.red,
+
+      },
+      FailedHeader:{
+        backgroundColor:Colors.red,
+        width:'100%',
+        margin:10,
+        paddingVertical:20
+      },
+      FailedBody:{
+        display:'flex',
+        width:'100%',
+
+      },
+      FailedHeaderContainer:{
+        justifyContent:'center',
+        alignItems:'center'
+      },
+      FailedHeaderTextBig:{
+        color:Colors.white,
+        fontSize:36,
+        fontWeight:'bold',
+        paddingBottom:50
+      },
+      FailedHeaderText:{
+        fontSize:24,
+        fontWeight:'bold',
+        color:Colors.white,
+        paddingBottom:50
+      },
+      restart:{
+        width:'100%',
+        justifyContent:'center',
+        alignItems:'center',
+
+      },
+      restartBtn:{
+        width:'100%',
+        backgroundColor:Colors.white,
+        borderRadius:10,
+        alignItems:'center',
+        justifyContent:'center',
+        padding:20
+      },
+      successContainer:{
+        flex:1,
+        backgroundColor:Colors.green,
+        justifyContent:'center',
+        alignItems:'center',
+        padding:20
+
+      },
+      SuccessHeader:{
+        width:'100%',
+        justifyContent:'center',
+        alignItems:'center',
+        paddingBottom:50
+
+      },
+      HeaderText:{
+        color:Colors.white,
+        fontSize:36,
+        fontWeight:'bold'
+      },
+      BodyText:{
+        color:Colors.white,
+        fontSize:24
+      }
+
+
+
 })

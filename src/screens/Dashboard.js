@@ -1,20 +1,27 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import {SafeAreaView,Text,TouchableOpacity,Image} from 'react-native';
 import { styles } from '../../style/style';
-import Questions from './Questions';
 
-const Dashboard = props => {
+const Dashboard = (props) => {
 
-    const handleClick = () => {
-        props.navigation.navigate(Questions)
-    }
+    const [questions,setQuestions] = useState();
+
+    const getData = async() => {
+        const response = await fetch('https://opentdb.com/api.php?amount=20&category=18',{method:'get'});
+        const data = await response.json();
+        setQuestions(data);
+    };
+
+    useEffect(() => {
+        getData();
+    },[questions])
 
 
     return(
         <SafeAreaView style={styles.container}>
             <Image source={require('../../assets/splash_logo.png')} style={styles.mainLogo}/>
 
-            <TouchableOpacity style={styles.DashboardBtn} onPress={handleClick}>
+            <TouchableOpacity style={styles.DashboardBtn} onPress={() => {props.navigation.navigate('Questions', {questions:questions})}}>
                 <Text style={styles.btnTxt}>Let's Play</Text>
             </TouchableOpacity>
         </SafeAreaView>
