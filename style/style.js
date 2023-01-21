@@ -50,7 +50,8 @@ export const styles = StyleSheet.create({
       btnTxt:{
         color:Colors.fontAnswerColor,
         fontSize:32,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        width:'100%'
       },
       dashboardHeaderStyle:{
         backgroundColor:Colors.backgroundBlue,
@@ -84,14 +85,17 @@ export const styles = StyleSheet.create({
         backgroundColor:Colors.grey,
         marginTop:20,
         padding:20,
-        width:'80%',
+        width:'100%',
         borderRadius:10
       },
       qHeader:{
         backgroundColor:Colors.backgroundBlue,
         width:'100%',
         height:'10%',
-        justifyContent:'center'
+        justifyContent:'center',
+        padding:25,
+        flexDirection:'row',
+        justifyContent:'space-between'
       },
       qText:{
         color:Colors.white,
@@ -137,7 +141,7 @@ export const styles = StyleSheet.create({
         width:'100%',
         justifyContent:'center',
         alignItems:'center',
-
+        padding:20
       },
       restartBtn:{
         width:'100%',

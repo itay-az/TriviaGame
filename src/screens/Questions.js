@@ -1,9 +1,8 @@
 import React, {useEffect,useState} from 'react';
-import {View,Text,ActivityIndicator,SafeAreaView,ScrollView, RefreshControl} from 'react-native';
+import {View,Text,ActivityIndicator,SafeAreaView,ScrollView} from 'react-native';
 import BooleanQ from '../components/BooleanQ';
 import MultipleQ from '../components/MultipleQ';
 import { styles } from '../../style/style';
-import * as Progress from 'react-native-progress'
 
 const Questions = (props) => {
 
@@ -12,7 +11,6 @@ const Questions = (props) => {
     const [isLoading,setIsLoading] = useState(true);
     const [correct,setCorrect] = useState(0);
     const [incorrect,setInCorrect] = useState(0);
-    const [timer,setTimer] = useState(60);
 
     const whenLoading = () => {
         setIsLoading(true);
@@ -21,19 +19,18 @@ const Questions = (props) => {
     }
 
     useEffect(() => {
-            whenLoading();
-        
-    },[])
+        whenLoading();        
+        },[])
 
     const handleClick = async(isCorrect) => {
         isCorrect == 1 ? setCorrect(correct+1) : setInCorrect(incorrect+1);
         setCnt(cnt+1);
         setQ(props.route.params.questions.results[cnt]);
-        if(incorrect >= 4) {
+        if(incorrect >= 1) {
             props.navigation.navigate("Failed")
         }
         if(cnt+1 >= 20){
-            if(incorrect> 4) {
+            if(incorrect> 1) {
                 props.navigation.navigate("Failed")
             }
             else{
