@@ -7,10 +7,10 @@ const BooleanQ = (props) => {
     return (
         <View style={styles.optionsView}>
             <TouchableOpacity style={styles.answerBtn} onPress={() => {props.handler(1)}}>
-                <Text style={styles.btnTxt}>{props.questions.correct_answer}</Text>
+                <Text style={styles.btnTxt}>{props.possibleAnswers[0]}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.answerBtn} onPress={() => {props.handler(0)}}>
-                <Text style={styles.btnTxt}>{props.questions.incorrect_answers}</Text>
+                <Text style={styles.btnTxt}>{props.possibleAnswers[1]}</Text>
             </TouchableOpacity>
         </View>
     )

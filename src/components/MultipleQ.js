@@ -10,16 +10,16 @@ const MultipleQ = (props) => {
     return (
         <View style={styles.optionsView}>
             <TouchableOpacity onPress={() => {props.handler(1)}} style={styles.answerBtn}> 
-                <Text style={styles.btnTxt}>{props.questions.correct_answer}</Text>
+                <Text style={styles.btnTxt}>{props.possibleAnswers[0]}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {props.handler(0)}} style={styles.answerBtn}>
-                <Text style={styles.btnTxt}>{props.questions.incorrect_answers[0]}</Text>
+                <Text style={styles.btnTxt}>{props.possibleAnswers[1]}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {props.handler(0)}} style={styles.answerBtn}>
-                <Text style={styles.btnTxt}>{props.questions.incorrect_answers[1]}</Text>
+                <Text style={styles.btnTxt}>{props.possibleAnswers[2]}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {props.handler(0)}} style={styles.answerBtn}>
-                <Text style={styles.btnTxt}>{props.questions.incorrect_answers[2]}</Text>
+                <Text style={styles.btnTxt}>{props.possibleAnswers[3]}</Text>
             </TouchableOpacity>
         </View>
     )

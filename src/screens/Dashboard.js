@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useCallback, useEffect,useState} from 'react';
 import {SafeAreaView,Text,TouchableOpacity,Image} from 'react-native';
 import { styles } from '../../style/style';
 
@@ -16,7 +16,7 @@ const Dashboard = (props) => {
         getData();
     },[questions])
 
-
+    useCallback
     return(
         <SafeAreaView style={styles.container}>
             <Image source={require('../../assets/splash_logo.png')} style={styles.mainLogo}/>
