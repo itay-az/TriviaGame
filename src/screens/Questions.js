@@ -13,7 +13,7 @@ const Questions = (props) => {
     const [correct,setCorrect] = useState(0);
     const [incorrect,setInCorrect] = useState(0);
     const [answers,setAnswers] = useState([]);
-    const [time, setTime] = useState(3);
+    const [time, setTime] = useState(60);
     
     const buildAnswers = async() => {
         let rnd = Math.floor(Math.random(4));
@@ -49,7 +49,7 @@ const Questions = (props) => {
             if (cnt < 20 && time <= 0){
                 setInCorrect(incorrect+1)
                 handleClick(0);
-                setTime(3);
+                setTime(60);
             }
           },1000);
           return ()=> clearInterval(interval);
@@ -92,7 +92,7 @@ const Questions = (props) => {
                 props.navigation.navigate("Success")
             }
         }
-        setTime(3)
+        setTime(60)
     }
 
 
